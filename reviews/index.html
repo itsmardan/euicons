@@ -1298,5 +1298,51 @@ if (!doNotTrack) {
   </div>
   </div>
 </footer>
-</body>
+
+
+
+
+<a class="whatsapp-widget" aria-label="Chat on WhatsApp" href="https://wa.me/447474896209" target="_blank">
+  
+
+</a>
+
+<style>
+   
+  .whatsapp-widget {
+      position: fixed;
+      bottom: 20px;  
+      right: 20px;   
+      z-index: 1000;  
+      text-decoration: none;
+  }
+  
+  .whatsapp-widget img {
+      width: 260px;  
+      height: 70px;  
+    
+  }
+  
+  .whatsapp-widget img:hover {
+      transform: scale(1.1);  
+  }
+  
+   
+  @media screen and (max-width: 768px) {
+      .whatsapp-widget img {
+          width: 180px;  
+          height: 50px;  
+      }
+  }
+</style>
+  
+  
+  <script>
+    document.addEventListener('scroll', function () {
+        const widget = document.querySelector('.whatsapp-widget');
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        widget.style.display = scrollTop > 200 ? 'block' : 'none'; 
+    });
+  </script>
+  </body>
 </html>
